@@ -152,7 +152,7 @@ class Calculator:
 
     def update_total_label(self):
         expression = self.total_expression
-        fo operator, symbol in self.operations.items():
+        for operator, symbol in self.operations.items():
             expression = expression.replace(operator, f' {symbol} ')
         self.total_label.config(text=expression)
 
